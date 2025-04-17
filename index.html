@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>
+        My first website
+    </title>
+
+    <style>
+        .row{
+            width:auto;
+            margin:auto;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:20px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+</head>
+
+<body style="background-color: rgb(127, 255, 153);">
+    <div class="row">
+        <div class="image-container"><img id="spider1" src="img/spider111.png" onmouseover="this.src='img/spider222.png';" onmouseout="this.src='img/spider111.png';" width="200"/></div>
+        <div class="image-container"><img id="dog1" src="img/dog1.png" onmouseover="this.src='img/dog22.png';" onmouseout="this.src='img/dog1.png';" width="200"/></div>
+        <div class="image-container"><img id="cat1" src="img/cat11.png" onmouseover="this.src='img/cat2.png';" onmouseout="this.src='img/cat11.png';" width="200"></div>
+    </div>
+    
+    <div class="row">
+        <div class="image-container"><img id="butterfly1" src="img/butterfly1.png" onmouseover="this.src='img/butterfly2.png';" onmouseout="this.src='img/butterfly1.png';" width="200"></div>
+        <div class="image-container"><img id="snake1" src="img/snake1.png" onmouseover="this.src='img/snake2.png';" onmouseout="this.src='img/snake1.png';" width="200"></div>
+        <div class="image-container"><img id="octopus1" src="img/octopus11.png" onmouseover="this.src='img/octopus2.png';" onmouseout="this.src='img/octopus1.png';" width="200"></div>
+    </div>
+
+    <div class="row">
+        <div class="image-container"><img id="bunyy1" src="img/bunny1.png" onmouseover="this.src='img/bunny2.png';" onmouseout="this.src='img/bunny1.png';" width="200"></div>
+        <div class="image-container"><img id="bat1" src="img/bat1.png" onmouseover="this.src='img/bat2.png';" onmouseout="this.src='img/bat1.png';" width="200"></div>
+        <div class="image-container"><img id="panda1" src="img/panda1.png" onmouseover="this.src='img/panda22.png';" onmouseout="this.src='img/panda1.png';" width="200"></div>
+    </div>
+    <script>
+        var sound1 = new buzz.sound("sound/spidercrawl.wav");
+        var sound2 = new buzz.sound("sound/dogbark.wav");
+
+        window.onload = function() {
+            document.getElementById('spider1').addEventListener('mouseover', function () {sound1.play();});
+            document.getElementById('dog1').addEventListener('mouseover', function () {sound2.play();});
+
+        };
+    </script>
+</body>
+</html>
